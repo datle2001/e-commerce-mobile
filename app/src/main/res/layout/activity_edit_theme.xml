@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mainActivity.account.editTheme.EditThemeActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup_themes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_edit_theme">
+
+        <RadioButton
+            android:id="@+id/radiobutton_dreamy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_radiobutton_dreamy"
+            android:text="Dreamy"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:buttonTint="@color/white"
+            android:padding="10dp"
+            >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radiobutton_forest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_radiobutton_forest"
+            android:text="Forest"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:buttonTint="@color/white"
+            android:padding="10dp">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radiobutton_wealth"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_radiobutton_wealth"
+            android:text="Wealth"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:buttonTint="@color/white"
+            android:padding="10dp">
+
+        </RadioButton>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_edit_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Choose Your Fav"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_theme_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Change now!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_themes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

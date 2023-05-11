@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:padding="@dimen/padding_items">
+
+    <ImageView
+        android:id="@+id/imageView_order_detail_product_photo"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/product_photo" />
+
+    <TextView
+        android:id="@+id/textView_order_detail_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_order_detail_product_photo"
+        app:layout_constraintTop_toTopOf="@+id/imageView_order_detail_product_photo" />
+
+    <TextView
+        android:id="@+id/textView_order_detail_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/textView_order_detail_product_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_order_detail_product_name" />
+
+    <EditText
+        android:id="@+id/editText_quantity"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:hint="@string/change_quantity"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_order_detail_product_photo"
+        app:layout_constraintStart_toStartOf="@+id/textView_order_detail_product_price"
+        app:layout_constraintTop_toBottomOf="@id/textView_order_detail_product_price" />
+
+    <TextView
+        android:id="@+id/textView_order_detail_product_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_order_detail_product_price"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_quantity"
+        app:layout_constraintEnd_toEndOf="@+id/textView_order_detail_product_total"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        android:contentDescription="@string/remove_product" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

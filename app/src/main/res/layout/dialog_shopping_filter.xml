@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout_shopping_dialog_filter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_round_grey"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/textView_shopping_filter_label_price_range"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Price range:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_shopping_label_filter" />
+
+    <EditText
+        android:id="@+id/editText_shopping_filter_price_min"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:hint="$"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_shopping_filter_label_price_range"
+        app:layout_constraintStart_toEndOf="@id/textView_shopping_filter_label_price_range"
+        app:layout_constraintTop_toTopOf="@id/textView_shopping_filter_label_price_range" />
+
+    <TextView
+        android:id="@+id/textView_shopping_filter_label_hyphen"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="-"
+        android:textScaleX="4"
+        app:layout_constraintBottom_toBottomOf="@id/editText_shopping_filter_price_min"
+        app:layout_constraintStart_toEndOf="@id/editText_shopping_filter_price_min"
+        app:layout_constraintTop_toTopOf="@id/editText_shopping_filter_price_min"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/editText_shopping_filter_price_max"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:hint="$$$"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_shopping_filter_label_price_range"
+        app:layout_constraintStart_toEndOf="@id/textView_shopping_filter_label_hyphen"
+        app:layout_constraintTop_toTopOf="@id/textView_shopping_filter_label_price_range" />
+
+    <TextView
+        android:id="@+id/textView_shopping_filter_label_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Min"
+        app:layout_constraintEnd_toEndOf="@+id/editText_shopping_filter_price_min"
+        app:layout_constraintStart_toStartOf="@id/editText_shopping_filter_price_min"
+        app:layout_constraintTop_toBottomOf="@id/editText_shopping_filter_price_min" />
+
+    <TextView
+        android:id="@+id/textView_shopping_filter_label_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Max"
+        app:layout_constraintEnd_toEndOf="@+id/editText_shopping_filter_price_max"
+        app:layout_constraintStart_toStartOf="@id/editText_shopping_filter_price_max"
+        app:layout_constraintTop_toBottomOf="@id/editText_shopping_filter_price_max" />
+
+    <Button
+        android:id="@+id/button_shopping_filter_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Apply"
+        app:layout_constraintEnd_toStartOf="@+id/button_shopping_filter_reset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_shopping_filter_label_min" />
+
+    <TextView
+        android:id="@+id/textView_shopping_label_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your filter"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_shopping_filter_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_shopping_filter_apply"
+        app:layout_constraintTop_toTopOf="@+id/button_shopping_filter_apply" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mainActivity.account.personalInfo.PersonalInfoActivity"
+    android:padding="@dimen/padding_activity_fragment">
+
+    <ImageView
+        android:id="@+id/imageView_personal_info_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/user_photo"/>
+
+    <TextView
+        android:id="@+id/textView_personal_info_label_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Username:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_personal_info_photo" />
+
+    <TextView
+        android:id="@+id/textView_personal_info_label_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sex:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_personal_info_label_username"
+        app:layout_constraintTop_toBottomOf="@id/textView_personal_info_label_username" />
+
+    <TextView
+        android:id="@+id/textView_personal_info_label_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Date of Birth:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_personal_info_label_sex" />
+
+    <EditText
+        android:id="@+id/editText_personal_info_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/test_username"
+        android:textSize="18sp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_personal_info_label_username"
+        app:layout_constraintStart_toEndOf="@+id/textView_personal_info_label_username" />
+
+    <TextView
+        android:id="@+id/textView_personal_info_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/not_selected"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_personal_info_label_dob"
+        app:layout_constraintStart_toEndOf="@+id/textView_personal_info_label_dob" />
+
+    <Spinner
+        android:id="@+id/spinner_personal_info_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_personal_info_label_sex"
+        app:layout_constraintStart_toEndOf="@+id/textView_personal_info_label_sex" />
+
+    <ImageButton
+        android:id="@+id/imageButton_personal_info_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_personal_info_dob"
+        app:layout_constraintStart_toEndOf="@+id/textView_personal_info_dob"
+        app:srcCompat="@drawable/baseline_edit_calendar_24"
+        android:background="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/button_personal_info_save_changes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_personal_info_label_dob" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
